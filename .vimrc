@@ -106,7 +106,17 @@ set background=dark
 syntax enable
 colorscheme solarized
 
-filetype plugin indent on
+" automatically populate the g:airline_symbols dictionary with the powerline symbols
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+let g:airline_theme='solarized'
+
+" Always show vim-airline
+set laststatus=2
+
 " Show existing tab with 4 spaces width
 set tabstop=4
 " When indenting with '>', use 4 spaces width
