@@ -91,7 +91,7 @@ endif " has("autocmd")
 " Convenient command to see the difference between the current buffer and the
 if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
+      \ | wincmd p | diffthis
 endif
 
 " Use molokai colour scheme
@@ -101,7 +101,7 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
-" solarized options 
+" solarized options
 set background=dark
 syntax enable
 colorscheme solarized
