@@ -97,8 +97,9 @@ endif
 " Use molokai colour scheme
 " :color molokai
 
-" pathogen for runtime path management
-execute pathogen#infect()
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
 
 " solarized options 
 set background=dark
