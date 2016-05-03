@@ -141,3 +141,6 @@ set expandtab
 
 " Enable line numbers
 set number
+
+" NERDTree keymap
+map <C-n> :NERDTreeToggle<CR>
