@@ -101,10 +101,25 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
-" solarized options
-set background=dark
-syntax enable
-colorscheme solarized
+" UTF-8 encoding
+set encoding=utf-8
+
+if has("gui_running")
+  " solarized options
+  set background=dark
+  syntax enable
+  colorscheme solarized
+
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 12
+  elseif has("gui_macvim")
+    set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h10
+  elseif has("gui_win32")
+    set guifont=Sauce_Code_Powerline:h10
+  endif
+else
+  colorscheme default
+endif
 
 " automatically populate the g:airline_symbols dictionary with the powerline symbols
 let g:airline_powerline_fonts = 1
@@ -126,7 +141,3 @@ set expandtab
 
 " Enable line numbers
 set number
-
-" UTF-8 encoding
-set encoding=utf-8
-
