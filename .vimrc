@@ -115,7 +115,7 @@ if has("gui_running")
   elseif has("gui_macvim")
     set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h10
   elseif has("gui_win32")
-    set guifont=Sauce_Code_Powerline:h10
+    set guifont=Sauce_Code_Powerline:h09
   endif
 else
   colorscheme default
