@@ -104,12 +104,12 @@ endif
 " UTF-8 encoding
 set encoding=utf-8
 
-if has("gui_running")
-  " solarized options
-  set background=dark
-  syntax enable
-  colorscheme solarized
+" solarized options
+set background=dark
+syntax enable
+colorscheme solarized
 
+if has("gui_running")
   if has("gui_gtk2")
     set guifont=Inconsolata\ 12
   elseif has("gui_macvim")
@@ -118,7 +118,7 @@ if has("gui_running")
     set guifont=Sauce_Code_Powerline:h09
   endif
 else
-  colorscheme default
+  " colorscheme default
 endif
 
 " automatically populate the g:airline_symbols dictionary with the powerline symbols
