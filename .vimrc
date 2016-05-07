@@ -139,7 +139,8 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
-" Enable line numbers
+" Enable (relative) line numbers
+set relativenumber
 set number
 
 " NERDTree keymap
