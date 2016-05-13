@@ -94,8 +94,10 @@ if !exists(":DiffOrig")
       \ | wincmd p | diffthis
 endif
 
-" Use molokai colour scheme
-" :color molokai
+" Vundle bootstrap
+if !isdirectory(expand("~/.vim/bundle/Vundle.vim"))
+  silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+endif
 
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
