@@ -143,5 +143,3 @@ set expandtab
 set relativenumber
 set number
 
-" NERDTree keymap
-map <C-n> :NERDTreeToggle<CR>
